@@ -1,0 +1,12 @@
+# Atheris (libFuzzer) target: the ELF launcher /mayhem/csr_helpers_fuzzer execs python3 on mayhem/harnesses/csr_helpers_fuzzer.py.
+project: savantenvs/acme2certifier
+target: csr_helpers_fuzzer
+
+cmds:
+  - cmd: /mayhem/csr_helpers_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/csr_helpers_fuzzer/testsuite

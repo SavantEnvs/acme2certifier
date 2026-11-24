@@ -1,0 +1,3 @@
+# Commit-image build context for mayhem/Dockerfile (BuildKit uses this instead of the root
+# .dockerignore, which drops .git and the docs; the commit image must carry the whole checkout).
+**/__pycache__

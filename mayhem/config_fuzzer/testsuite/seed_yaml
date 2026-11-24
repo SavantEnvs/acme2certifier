@@ -1,0 +1,8 @@
+DEFAULT:
+  debug: false
+CAhandler:
+  handler_file: x.py
+  allowed_domainlist:
+    - example.com
+Order:
+  tnauthlist_support: true

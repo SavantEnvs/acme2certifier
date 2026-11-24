@@ -1,0 +1,12 @@
+# Atheris (libFuzzer) target: the ELF launcher /mayhem/openssl_ca_fuzzer execs python3 on mayhem/harnesses/openssl_ca_fuzzer.py.
+project: savantenvs/acme2certifier
+target: openssl_ca_fuzzer
+
+cmds:
+  - cmd: /mayhem/openssl_ca_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/openssl_ca_fuzzer/testsuite

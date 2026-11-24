@@ -1,0 +1,12 @@
+# Atheris (libFuzzer) target: the ELF launcher /mayhem/jwk_signature_fuzzer execs python3 on mayhem/harnesses/jwk_signature_fuzzer.py.
+project: savantenvs/acme2certifier
+target: jwk_signature_fuzzer
+
+cmds:
+  - cmd: /mayhem/jwk_signature_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/jwk_signature_fuzzer/testsuite

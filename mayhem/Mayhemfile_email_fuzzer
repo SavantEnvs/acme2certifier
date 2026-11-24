@@ -1,0 +1,12 @@
+# Atheris (libFuzzer) target: the ELF launcher /mayhem/email_fuzzer execs python3 on mayhem/harnesses/email_fuzzer.py.
+project: savantenvs/acme2certifier
+target: email_fuzzer
+
+cmds:
+  - cmd: /mayhem/email_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/email_fuzzer/testsuite

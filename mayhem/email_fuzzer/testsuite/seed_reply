@@ -1,0 +1,21 @@
+From: admin@example.com
+To: acme@ca.example
+Subject: RE: ACME: abcdefgh
+Message-ID: <2@example.com>
+In-Reply-To: <1@ca.example>
+References: <0@ca.example> <1@ca.example>
+Content-Type: multipart/mixed; boundary="b"
+
+--b
+Content-Type: text/plain; charset=utf-8
+
+-----BEGIN ACME RESPONSE-----
+LoqXcYV8q5ONbJQxbmR7SCTNo3tiAXDfowyjxAjEuX0
+-----END ACME RESPONSE-----
+--b
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="a.bin"
+Content-Transfer-Encoding: base64
+
+AAEC
+--b--

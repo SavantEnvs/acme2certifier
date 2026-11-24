@@ -1,0 +1,12 @@
+# Atheris (libFuzzer) target: the ELF launcher /mayhem/dns_persist_fuzzer execs python3 on mayhem/harnesses/dns_persist_fuzzer.py.
+project: savantenvs/acme2certifier
+target: dns_persist_fuzzer
+
+cmds:
+  - cmd: /mayhem/dns_persist_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dns_persist_fuzzer/testsuite

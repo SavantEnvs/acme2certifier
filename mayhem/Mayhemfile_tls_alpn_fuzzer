@@ -1,0 +1,12 @@
+# Atheris (libFuzzer) target: the ELF launcher /mayhem/tls_alpn_fuzzer execs python3 on mayhem/harnesses/tls_alpn_fuzzer.py.
+project: savantenvs/acme2certifier
+target: tls_alpn_fuzzer
+
+cmds:
+  - cmd: /mayhem/tls_alpn_fuzzer
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tls_alpn_fuzzer/testsuite
